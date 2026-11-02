@@ -1,0 +1,264 @@
+.concepts-grid {
+  gap: 1.25rem;
+}
+
+.concept-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.concept-card:hover {
+  transform: translateY(-3px);
+}
+
+.concept-card.accent-blue  { border-color: rgba(88, 166, 255, 0.3); }
+.concept-card.accent-cyan  { border-color: rgba(57, 208, 216, 0.3); }
+.concept-card.accent-purple{ border-color: rgba(188, 140, 255, 0.3); }
+
+.concept-card.accent-blue:hover  { border-color: var(--blue); box-shadow: 0 0 16px rgba(88,166,255,0.2); }
+.concept-card.accent-cyan:hover  { border-color: var(--cyan); box-shadow: 0 0 16px rgba(57,208,216,0.15); }
+.concept-card.accent-purple:hover{ border-color: var(--purple); box-shadow: 0 0 16px rgba(188,140,255,0.15); }
+
+.concept-icon {
+  font-size: 1.6rem;
+}
+
+.concept-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.concept-card p {
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+/* Lane diagram */
+.lane-diagram {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.lane-diagram-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cyan);
+  text-align: center;
+  font-family: var(--font-mono);
+  margin-bottom: 0.5rem;
+}
+
+.ld-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ld-label {
+  width: 52px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.ld-lanes {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+}
+
+.ld-lane {
+  flex: 1;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid;
+}
+
+.ld-lane.input {
+  background: rgba(88, 166, 255, 0.1);
+  border-color: var(--blue-dark);
+}
+
+.ld-lane.output {
+  background: rgba(57, 208, 216, 0.1);
+  border-color: var(--cyan-dark);
+}
+
+.ld-lane-name {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.ld-lane-val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.instruction-row .ld-instruction {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.instr-arrow {
+  font-size: 0.9rem;
+  color: var(--yellow);
+}
+
+.instr-text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  background: rgba(210, 153, 34, 0.12);
+  border: 1px solid rgba(210, 153, 34, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.4rem;
+}
+
+.ld-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--green);
+  font-family: var(--font-mono);
+  margin-top: 0.25rem;
+}
+
+/* Scalar vs SIMD */
+.scalar-simd-compare {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+.compare-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.compare-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.compare-header.scalar {
+  background: rgba(88, 166, 255, 0.08);
+  color: var(--blue);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.compare-header.simd {
+  background: rgba(57, 208, 216, 0.08);
+  color: var(--cyan);
+  border: 1px solid rgba(57, 208, 216, 0.2);
+}
+
+.compare-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scalar-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.6rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.step-instr { color: var(--yellow); font-weight: 700; }
+.step-arrow { color: var(--text-muted); }
+.step-data  { color: var(--blue); }
+.step-result{ color: var(--cyan); font-weight: 600; }
+
+.simd-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.6rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+}
+
+.simd-data-group {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.simd-lane {
+  color: var(--blue);
+  font-size: 0.8rem;
+}
+
+.simd-lane.out {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.compare-count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: right;
+  padding-top: 0.25rem;
+}
+
+.compare-count.highlight {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.compare-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .scalar-simd-compare {
+    flex-direction: column;
+  }
+  .compare-vs { padding: 0.5rem 0; }
+}

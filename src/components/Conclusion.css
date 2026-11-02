@@ -1,0 +1,149 @@
+.conclusion-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.conclusion-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.conclusion-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.conclusion-text strong {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Learning outcomes */
+.lo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lo-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lo-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.lo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  transition: border-color var(--transition), transform 0.2s ease;
+}
+
+.lo-item:hover {
+  transform: translateX(4px);
+  border-color: var(--purple-dark);
+}
+
+.lo-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.lo-item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Formula recap */
+.formula-recap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formula-recap h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.formula-box {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 3px solid;
+}
+
+.formula-box.accent-blue   { border-color: var(--blue); }
+.formula-box.accent-cyan   { border-color: var(--cyan); }
+.formula-box.accent-green  { border-color: var(--green); }
+
+.formula-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.formula-expr {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.formula-expr.blue  { color: var(--blue); }
+.formula-expr.cyan  { color: var(--cyan); }
+.formula-expr.green { color: var(--green); }
+
+.formula-desc {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* CTA */
+.conclusion-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.conclusion-cta p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .formula-grid { grid-template-columns: 1fr; }
+  .conclusion-block { flex-direction: column; }
+}

@@ -1,0 +1,315 @@
+/* ImageSimulator styles */
+
+.sim-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.sim-upload-card,
+.sim-controls-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sim-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+/* Control groups */
+.ctrl-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ctrl-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.ctrl-val {
+  color: var(--blue);
+  font-family: var(--font-mono);
+}
+
+/* Operation buttons */
+.op-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.op-btn {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  justify-content: flex-start;
+  transition: all var(--transition);
+}
+
+.op-btn:hover:not(:disabled) {
+  background: rgba(88, 166, 255, 0.08);
+  color: var(--blue);
+  border-color: var(--blue-dark);
+}
+
+.op-btn.active {
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* Formula box */
+.op-formula {
+  font-size: 0.85rem;
+}
+
+.op-formula code {
+  color: var(--cyan);
+}
+
+/* Vector width buttons */
+.vector-width-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vw-btn {
+  flex: 1;
+  justify-content: center;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.vw-btn:hover:not(:disabled) {
+  background: rgba(57, 208, 216, 0.08);
+  color: var(--cyan);
+  border-color: var(--cyan-dark);
+}
+
+.vw-btn.active {
+  background: rgba(57, 208, 216, 0.12);
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+/* Simulation action buttons */
+.sim-action-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sim-state-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.sim-mode-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Canvas cards */
+.canvas-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.canvas-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.canvas-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.sim-canvas {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  image-rendering: auto;
+  display: block;
+  background: var(--bg-secondary);
+  min-height: 80px;
+}
+
+.canvas-placeholder {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* Stats panels */
+.sim-stats-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sim-mode-desc {
+  font-size: 0.87rem;
+  line-height: 1.6;
+  padding: 0.6rem 0.85rem;
+  background: rgba(88, 166, 255, 0.06);
+  border-left: 3px solid var(--blue-dark);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.stats-grid {
+  gap: 1rem;
+}
+
+/* Pixel value display */
+.pixel-vals-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pixel-arrow {
+  font-size: 0.78rem;
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pv-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  min-width: 110px;
+}
+
+.pv-box.accent {
+  border-color: var(--cyan-dark);
+  background: rgba(57, 208, 216, 0.06);
+}
+
+.pv-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.pv-swatch {
+  width: 100%;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.pv-vals {
+  display: flex;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.pv-vals strong {
+  color: var(--text-primary);
+}
+
+/* SIMD lanes */
+.lanes-vis {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lanes-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.lanes-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.lane-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius-sm);
+  min-width: 44px;
+  border: 1px solid;
+  transition: all 0.15s ease;
+}
+
+.lane-box.active {
+  background: rgba(57, 208, 216, 0.18);
+  border-color: var(--cyan);
+  box-shadow: 0 0 8px rgba(57, 208, 216, 0.3);
+}
+
+.lane-box.inactive {
+  background: var(--bg-secondary);
+  border-color: var(--border);
+  opacity: 0.4;
+}
+
+.lane-box-id {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.lane-box-status {
+  font-size: 0.9rem;
+  color: var(--cyan);
+}
+
+.lane-box.inactive .lane-box-status {
+  color: var(--text-muted);
+}
+
+.lanes-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .sim-layout { grid-template-columns: 1fr; }
+  .sim-action-row { flex-direction: column; }
+  .sim-action-row .btn { width: 100%; justify-content: center; }
+  .vector-width-btns { gap: 0.35rem; }
+  .pixel-vals-row { flex-direction: column; align-items: flex-start; }
+}
